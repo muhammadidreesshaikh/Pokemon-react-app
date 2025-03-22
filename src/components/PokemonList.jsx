@@ -7,7 +7,7 @@ const PokemonList = () => {
   if (isLoading)
     return (
       <div className="text-center mt-4">
-        <div className="spinner-border text-primary"></div>
+        <div className="spinner-border text-primary" role="status"></div>
       </div>
     );
 
