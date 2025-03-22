@@ -8,7 +8,7 @@ const PokemonDetail = () => {
   if (isLoading)
     return (
       <div className="text-center mt-4">
-        <div className="spinner-border text-primary"></div>
+        <div className="spinner-border text-primary" role="status"></div>
       </div>
     );
 
@@ -17,11 +17,11 @@ const PokemonDetail = () => {
   return (
     <div className="container d-flex justify-content-center mt-5">
       <div className="card shadow-lg p-4" style={{ width: "25rem" }}>
-        <img src={data.sprites.front_default} className="card-img-top" alt={data.name} />
+        <img src={data.sprites.front_default} className="card-img-top" alt={data.name} role="img" />
         <div className="card-body text-center">
-          <h5 className="card-title text-capitalize">{data.name}</h5>
-          <p><strong>Height:</strong> {data.height}</p>
-          <p><strong>Weight:</strong> {data.weight}</p>
+          <h5 className="card-title text-capitalize" role="name">{data.name}</h5>
+          <p role="height"><strong>Height:</strong> {data.height}</p>
+          <p role="weight"><strong>Weight:</strong> {data.weight}</p>
         </div>
       </div>
     </div>
